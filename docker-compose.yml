@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '3'
+services:
+  flask:
+    image: flask_chatbot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - "$PWD/app/:/app"
